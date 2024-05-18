@@ -34,13 +34,9 @@ public class AgeAnonymizer: AnonymizerBase
     {
         int percentage = (int)((double)(index+1) / count * 100);
 
-        var pos = Console.GetCursorPosition();
-        Console.SetCursorPosition(0, pos.Top);
-
-        Console.Write($"Processing: {percentage} %");
+        Console.Write($"\rProcessing: {percentage} %");
 
         if (index == count - 1)
             Console.WriteLine();
-
     }
 }
